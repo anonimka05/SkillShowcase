@@ -31,16 +31,3 @@ export class UserService {
     });
   }
 }
-
-//! MUHAMMAD SAID RAMAZON BUTIY - kitoblarini olish
-// ? allohim nafsim va qalbim ortasidagi arosatda qoldim, meni ozing qutqar
-// ? xarom sevgidan, xarom oydan ozing saqla, qalbim seni unutib ozgasini
-// ? kirishiga yol qoyma, agar seni unutib birisini sevsam menga uni nasib etma
-// https://www.youtube.com/watch?v=wB_7YzQglgw
-// ? 1:45
-// ? "ozimni topdim" - kitobi
-// ? "iqror" - kitobi
-// ? https://www.youtube.com/watch?v=2QBELxy5JoE
-// ? aqlni rivojlantirish - kitob oqish, dono inson bilan suhbat 
-// ? ruh - ruhiyat kuchayishi un 2 ta, 1. ibodat, 2. ehson 
-// ! stivin kovin - muvofaqiyatli odamlarning 7 konikmasi
