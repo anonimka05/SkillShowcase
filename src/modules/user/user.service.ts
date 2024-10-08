@@ -44,3 +44,5 @@ export class UserService {
 // ? aqlni rivojlantirish - kitob oqish, dono inson bilan suhbat 
 // ? ruh - ruhiyat kuchayishi un 2 ta, 1. ibodat, 2. ehson 
 // ! stivin kovin - muvofaqiyatli odamlarning 7 konikmasi
+// ? risolai-qushola
+// ? niyat qilganda sababini ham qilish kk, (nima uchun qilmoqchiman, bunga erishib nima qilaman)

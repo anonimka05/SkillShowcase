@@ -1,5 +1,5 @@
 import { Column, DataType, HasMany, Model, Table } from 'sequelize-typescript';
-import { Project } from 'src/modules/projects';
+import { Project } from '@modules';
 
 @Table({ tableName: 'categories', timestamps: true })
 export class Category extends Model {
@@ -13,5 +13,5 @@ export class Category extends Model {
   description: string;
 
   @HasMany(() => Project)
-  projects: Project[]
+  projects: Project[];
 }

@@ -38,7 +38,7 @@ import { UploadModule } from './upload';
             // user: process.env.DB_USER,
             models: [Category, User, Project],
             synchronize: true,
-            // sync: {force: true},
+            sync: {force: true},
             logging: console.log,
             autoLoadModels: true,
           };

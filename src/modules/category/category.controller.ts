@@ -19,7 +19,7 @@ import { ApiOperation, ApiTags } from '@nestjs/swagger';
 export class CategoryController {
   #_service: CategoryService;
 
-  constructor(service: CategoryService) {
+  constructor(private readonly service: CategoryService) {
     this.#_service = service;
   }
   @ApiOperation({ summary: 'Barcha categorylarni olish' })
@@ -30,9 +30,8 @@ export class CategoryController {
 
   @ApiOperation({ summary: 'Project yaratish' })
   @Post('/add')
-  async createCategory(@Body() category: CreateCategoryDto): Promise<string> {
-    this.#_service.creteCategory(category);
-    return 'created successfully';
+  async createCategory(@Body() category: CreateCategoryDto): Promise<any> {
+    return this.#_service.createCategory(category);
   }
 
   @ApiOperation({ summary: 'Project malumotlarini ozgartirish' })

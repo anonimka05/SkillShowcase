@@ -6,8 +6,8 @@ import {
   ForeignKey,
   BelongsTo,
 } from 'sequelize-typescript';
-import { Category } from 'src/modules/category';
-import { User } from 'src/modules/user';
+import { Category } from '@modules';
+import { User } from '@modules';
 
 @Table({ tableName: 'projects', timestamps: true })
 export class Project extends Model {

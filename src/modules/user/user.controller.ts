@@ -12,7 +12,7 @@ import { User } from './model';
 import { CreateUserDto } from './dtos';
 import { UpdateUserDto } from './dtos/update-user.dto';
 import { UserService } from './user.service';
-import { ApiOperation, ApiParam, ApiProperty, ApiTags } from '@nestjs/swagger';
+import { ApiOperation, ApiTags } from '@nestjs/swagger';
 
 @ApiTags('User')
 @Controller('users')
@@ -48,12 +48,6 @@ export class UserController {
 
   @ApiOperation({ summary: 'User malumotlarini ochirish' })
   @Delete('/delete/:userId')
-  // @ApiParam({
-  //   name: 'userId',
-  //   example: 1,
-  //   description: 'userId kiriting',
-  //   required: true,
-  // })
   async deleteUser(
     @Param('userId', ParseIntPipe) userId: number,
   ): Promise<string> {

@@ -1,8 +1,8 @@
 import { InjectModel } from '@nestjs/sequelize';
-import { Category } from './model/category.model';
 import { Injectable } from '@nestjs/common';
 import { CreateCategoryDto } from './dtos';
 import { UpdateCategoryRequest } from './interface/update-category.interfase';
+import { Category } from './model';
 
 @Injectable()
 export class CategoryService {
@@ -12,8 +12,8 @@ export class CategoryService {
     return await this.categoryModel.findAll();
   }
 
-  async creteCategory(payload: CreateCategoryDto): Promise<void> {
-    await this.categoryModel.create({ ...payload });
+  async createCategory(payload: CreateCategoryDto): Promise<any> {
+    await await this.categoryModel.create({ ...payload });
   }
 
   async updateCategory(
@@ -24,6 +24,6 @@ export class CategoryService {
   }
 
   async deleteCategory(id: number): Promise<void> {
-    await this.categoryModel.destroy({where: {id: id}});
+    await this.categoryModel.destroy({ where: { id: id } });
   }
 }

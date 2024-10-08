@@ -1,7 +1,7 @@
 import { InjectModel } from '@nestjs/sequelize';
 import { Project } from './model';
 import { CreateProjectRequest } from './interface';
-import { UploadService } from 'src/upload';
+import { UploadService } from '@upload';
 
 export class ProjectService {
   constructor(
@@ -12,20 +12,6 @@ export class ProjectService {
   async getAllProject(): Promise<Project[]> {
     return await this.projectModel.findAll();
   }
-
-  // async createProject(payload: CreateProjectRequest): Promise<void> {
-  //   const fileOptions = await this.uploadService.uploadFile({
-  //     file: payload.image,
-  //     destination: 'uploads/projects',
-  //   });
-
-  //   await this.projectModel.create({
-  //     title: payload.title,
-  //     image: fileOptions.imageUrl,
-  //     userId: payload.userId,
-  //     categoryId: payload.categoryId,
-  //   });
-  // }
 
   async createProject(payload: CreateProjectRequest): Promise<void> {
     const userExists = await this.projectModel.findByPk(payload.userId);

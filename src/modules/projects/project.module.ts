@@ -3,7 +3,7 @@ import { SequelizeModule } from '@nestjs/sequelize';
 import { Project } from './model';
 import { ProjectService } from './project.service';
 import { ProjectController } from './project.controller';
-import { UploadService } from 'src/upload';
+import { UploadService } from '@upload';
 
 @Module({
   imports: [SequelizeModule.forFeature([Project])],
