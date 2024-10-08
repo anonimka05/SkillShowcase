@@ -54,6 +54,3 @@ import { UploadModule } from './upload';
   ],
 })
 export class AppModule {}
-
-
-//! https://docs.nestjs.com/openapi/introduction
