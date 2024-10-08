@@ -48,12 +48,6 @@ export class UserController {
 
   @ApiOperation({ summary: 'User malumotlarini ochirish' })
   @Delete('/delete/:userId')
-  // @ApiParam({
-  //   name: 'userId',
-  //   example: 1,
-  //   description: 'userId kiriting',
-  //   required: true,
-  // })
   async deleteUser(
     @Param('userId', ParseIntPipe) userId: number,
   ): Promise<string> {
